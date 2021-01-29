@@ -1,7 +1,6 @@
 package basics;
 
 import java.util.Scanner;
-
 public class Factorial {
 
 	public static void main(String[] args) {
@@ -15,7 +14,5 @@ public class Factorial {
 			 fact = fact * i;
 		
 		System.out.printf("Factorial of %d is %d", num,fact);
-
 	}
-
 }
