@@ -10,8 +10,6 @@ public class TestSavingsAccount {
 		  sa.deposit(10000);
 		  sa.withdraw(12000);
 		  System.out.println(sa.getBalance());
-		  
-		 
 	}
 
 }
