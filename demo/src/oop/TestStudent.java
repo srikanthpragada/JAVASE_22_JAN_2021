@@ -5,35 +5,42 @@ class Student {
 	private String name;
 	private int course, feepaid;
 
-	public Student(int no, String n, int c) {
-		admno = no;
-		name = n;
-		course = c;
+	public Student(int admno, String name, int course) {
+		this.admno = admno;
+		this.name = name;
+		this.course = course;
 	}
 
+	
+	public Student(int admno, String name, int course, int feepaid) {
+		 this(admno,name,course); // call a constructor 
+		 this.feepaid = feepaid;
+	}
+
+	
 	public void print() {
-		System.out.println(admno);   // int
-		System.out.println(name);   // String
+		System.out.println(this.admno);   // int
+		System.out.println(this.name);   // String
 		System.out.println(getCourseName());
 	}
 
 	private String getCourseName() {
-		return course == 1 ? "Java SE" : "Java EE";
+		return this.course == 1 ? "Java SE" : "Java EE";
 	}
 
 	public int getTotalFee() {
-		return course == 1 ? 5000 : 10000;
+		return this.course == 1 ? 5000 : 10000;
 	}
 
 	public void pay(int amount) {
 		if (amount > getDue())
 			System.out.println("Excess amount being paid!");
 		else
-			feepaid += amount;
+			this.feepaid += amount;
 	}
 
 	public int getDue() {
-		return getTotalFee() - feepaid;
+		return getTotalFee() - this.feepaid;
 	}
 }
 
