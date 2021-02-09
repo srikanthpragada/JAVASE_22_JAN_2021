@@ -39,10 +39,7 @@ public class TestProduct {
         dp.print();
         
         Product p = dp;  // upcasting 
-        DiscountedProduct dp2 = (DiscountedProduct) p; // Downcasting 
-        
-        
-        
+        p.print(); 
 	}
 
 }
