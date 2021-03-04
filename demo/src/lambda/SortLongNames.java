@@ -11,6 +11,7 @@ public class SortLongNames {
 		 Arrays.stream(names)
 		       .filter( v -> v.length() > 3)
 		       .sorted()
+		       .limit(3)
 		       .forEach(System.out::println);
 		       //.forEach( v -> System.out.println(v));
 
